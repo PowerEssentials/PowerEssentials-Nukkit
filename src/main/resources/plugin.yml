@@ -1,0 +1,12 @@
+name: PowerEssentials
+main: com.pe.poweressentials.Loader
+description: PowerEssentials plugin for Nukkit
+api: 1.0.0
+version: 1.0.0
+author: Angga7Togk
+
+permissions:
+  poweressentials.fly:
+    default: op
+  poweressentials.fperm:
+    default: op
