@@ -8,7 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 import com.pe.poweressentials.commands.FPermCommand;
+import com.pe.poweressentials.commands.FeedCommand;
 import com.pe.poweressentials.commands.FlyCommand;
+import com.pe.poweressentials.commands.HealCommand;
 import com.pe.poweressentials.commands.PECommand;
 import com.pe.poweressentials.config.PEConfig;
 import com.pe.poweressentials.i18n.PELang;
@@ -55,7 +57,7 @@ public class Loader extends PluginBase {
                     continue;
                 }
 
-                this.saveResource("lang/" + fileName, false);
+                this.saveResource("language/" + fileName, true);
                 this.getLogger().info("Loaded language file: " + fileName);
             }
 
@@ -73,7 +75,9 @@ public class Loader extends PluginBase {
     private void loadCommands() {
         Map<String, List<PECommand>> commands = Map.of(
                 "fly", List.of(new FlyCommand()),
-                "fperm", List.of(new FPermCommand())
+                "fperm", List.of(new FPermCommand()),
+                "heal", List.of(new HealCommand()),
+                "feed", List.of(new FeedCommand())
         );
 
         for (Map.Entry<String, List<PECommand>> entry : commands.entrySet()) {

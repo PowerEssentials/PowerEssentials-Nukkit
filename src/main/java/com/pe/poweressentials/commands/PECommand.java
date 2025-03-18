@@ -30,6 +30,12 @@ public abstract class PECommand extends Command {
     super.setUsage(PELang.fromConsole().translateString("usage", sectionLang));
   }
 
+  public void setupSectionLang(String sectionLang){
+    this.setDescription(sectionLang);
+    this.setPrefix(sectionLang);
+    this.setUsage(sectionLang);
+  }
+
   public void setPrefix(String sectionLang) {
     this.prefix = TextFormat.GOLD + PELang.fromConsole().translateString("prefix", sectionLang) + " ";
   }

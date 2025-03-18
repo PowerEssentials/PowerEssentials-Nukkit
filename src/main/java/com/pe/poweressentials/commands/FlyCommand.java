@@ -9,13 +9,14 @@ import cn.nukkit.utils.TextFormat;
 public class FlyCommand extends PECommand {
 
   public FlyCommand() {
-    super("fly");
+    super("fly");   
     this.setDescription("fperms");
     this.setPrefix("fly");
     this.setPermission("fly");
     this.setAliases(new String[] { "flight" });
   }
 
+  @SuppressWarnings("deprecation")
   @Override
   public boolean run(CommandSender sender, String prefix, PELang lang, String[] args) {
     if (args.length == 0) {
@@ -27,13 +28,18 @@ public class FlyCommand extends PECommand {
                 "fly")
                 : lang.translateString("enabled",
                     "fly")));
-
+        
         player.setAllowFlight(!player.getAllowFlight());
       } else {
         sender.sendMessage(prefix + TextFormat.RED + lang.translateString("errorCommandConsole"));
         return false;
       }
     } else {
+      if (!sender.hasPermission("poweressentials.fly.others")) {
+        sender.sendMessage(prefix + TextFormat.RED + lang.translateString("errorNoPermission"));
+        return false;
+      }
+
       Player targetPlayer = sender.getServer().getPlayer(args[0]);
 
       if (targetPlayer == null) {
@@ -49,9 +55,9 @@ public class FlyCommand extends PECommand {
                   "fly")));
 
       sender.sendMessage(prefix + (targetPlayer.getAllowFlight()
-          ? lang.translateString("otherDisabled",
+          ? lang.translateString("othersDisabled",
               "fly", new String[] { targetPlayer.getName() })
-          : lang.translateString("otherEnabled",
+          : lang.translateString("othersEnabled",
               "fly", new String[] { targetPlayer.getName() })));
 
       targetPlayer.setAllowFlight(!targetPlayer.getAllowFlight());

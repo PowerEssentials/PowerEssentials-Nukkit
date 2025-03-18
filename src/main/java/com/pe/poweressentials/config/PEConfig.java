@@ -29,4 +29,12 @@ public class PEConfig {
   public static boolean isCommandDisabled(String command) {
     return config.getStringList("disabled-commands").contains(command.toLowerCase());
   }
+
+  public static long getHealCooldown() {
+    return config.getLong("heal-cooldown", 60000);
+  }
+
+  public static long getFeedCooldown() {
+    return config.getLong("feed-cooldown", 60000);
+  }
 }

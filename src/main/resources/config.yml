@@ -1,5 +1,8 @@
 language: "en_us"
 
+heal-cooldown: 60000 # 1 minute
+feed-cooldown: 60000 # 1 minute
+
 disabled-commands: []
 
 config-version: "1.0"
