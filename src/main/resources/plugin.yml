@@ -10,7 +10,7 @@ permissions:
     default: op
   poweressentials.fly.others:
     default: op
-    
+
   poweressentials.fperm:
     default: op
 
@@ -26,4 +26,21 @@ permissions:
   poweressentials.feed.others:
     default: op
   poweressentials.feed.bypass.cooldown:
+    default: op
+  
+  poweressentials.gmc:
+    default: op
+  poweressentials.gmc.others:
+    default: op
+  poweressentials.gms:
+    default: op
+  poweressentials.gms.others:
+    default: op
+  poweressentials.gma:
+    default: op
+  poweressentials.gma.others:
+    default: op
+  poweressentials.gmsp:
+    default: op
+  poweressentials.gmsp.others:
     default: op

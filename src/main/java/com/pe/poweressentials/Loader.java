@@ -12,6 +12,10 @@ import com.pe.poweressentials.commands.FeedCommand;
 import com.pe.poweressentials.commands.FlyCommand;
 import com.pe.poweressentials.commands.HealCommand;
 import com.pe.poweressentials.commands.PECommand;
+import com.pe.poweressentials.commands.gamemode.GMACommand;
+import com.pe.poweressentials.commands.gamemode.GMCCommand;
+import com.pe.poweressentials.commands.gamemode.GMSCommand;
+import com.pe.poweressentials.commands.gamemode.GMSPCommand;
 import com.pe.poweressentials.config.PEConfig;
 import com.pe.poweressentials.i18n.PELang;
 import com.pe.poweressentials.utils.Utils;
@@ -77,8 +81,8 @@ public class Loader extends PluginBase {
                 "fly", List.of(new FlyCommand()),
                 "fperm", List.of(new FPermCommand()),
                 "heal", List.of(new HealCommand()),
-                "feed", List.of(new FeedCommand())
-        );
+                "feed", List.of(new FeedCommand()),
+                "gamemode", List.of(new GMCCommand(), new GMSCommand(), new GMSPCommand(), new GMACommand()));
 
         for (Map.Entry<String, List<PECommand>> entry : commands.entrySet()) {
             if (!PEConfig.isCommandDisabled(entry.getKey())) {

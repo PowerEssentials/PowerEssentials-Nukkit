@@ -15,7 +15,7 @@
     <repositories>
 
         <repository>
-            <id>opencollab-repo-release</id>
+            <id>opencollab-repo-release</id>    
             <url>https://repo.opencollab.dev/maven-releases</url>
         </repository>
 
