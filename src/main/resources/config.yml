@@ -1,8 +1,33 @@
+# General Language Configuration
+# Set the language for the plugin. Default is "en_us".
 language: "en_us"
 
-heal-cooldown: 60000 # 1 minute
-feed-cooldown: 60000 # 1 minute
+# Cooldowns (in milliseconds)
+# These settings define the cooldown periods for specific commands.
+# Example: 60000 milliseconds = 60 seconds = 1 minute.
+heal-cooldown: 60000 # Cooldown for the /heal command (1 minute)
+feed-cooldown: 60000 # Cooldown for the /feed command (1 minute)
 
+# Home System Configuration
+# Default home limits and additional limits based on permissions.
+home-default-limit: 5 # The default number of homes a user can set.
+
+# Permission-based home limits
+# Users with specific permissions can have more homes.
+home-permission-limits:
+  home.limit.10: 10 # Permission "home.limit.10" allows 10 homes.
+
+# Blacklisted Worlds for Home Setting
+# Players cannot set homes in these worlds.
+home-blacklist-worlds:
+  - world2 # Name of the blacklisted world.
+  - world3 # Another blacklisted world.
+
+# Disabled Commands
+# List of commands that should be disabled in the plugin.
+# Leave empty if no commands need to be disabled.
 disabled-commands: []
 
+# Configuration Version
+# Used for tracking changes or updates to the configuration file.
 config-version: "1.0"

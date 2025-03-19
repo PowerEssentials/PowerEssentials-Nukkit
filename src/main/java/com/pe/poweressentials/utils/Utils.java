@@ -29,4 +29,21 @@ public class Utils {
     File directory = new File(dir);
     return unlinkRecursive(directory);
   }
+
+  /**
+   * Validates if the input string contains only allowed characters: letters,
+   * numbers, and '-'.
+   *
+   * @param input The string to validate.
+   * @return true if the string is valid, false otherwise.
+   */
+  public static boolean textIsClean(String input) {
+    if (input == null || input.isEmpty()) {
+      return false; 
+    }
+
+    // Regex to allow only letters, numbers, and '-'
+    String regex = "^[a-zA-Z0-9\\-]+$";
+    return input.matches(regex);
+  }
 }

@@ -15,7 +15,7 @@
     <repositories>
 
         <repository>
-            <id>opencollab-repo-release</id>    
+            <id>opencollab-repo-release</id>
             <url>https://repo.opencollab.dev/maven-releases</url>
         </repository>
 
@@ -41,6 +41,14 @@
             <version>1.7</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -49,7 +57,7 @@
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
-            
+
         </resources>
 
         <plugins>

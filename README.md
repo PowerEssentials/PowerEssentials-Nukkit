@@ -67,7 +67,7 @@
 | `/nightvision`                                                       | Night Vision mode.                                                                 | ⌛     |
 
 ---
-
+    
 ## 📂 Installation
 
 1. Download the latest release from the [releases page](https://github.com/PowerEssentials/PowerEssentials-Nukkit/releases).

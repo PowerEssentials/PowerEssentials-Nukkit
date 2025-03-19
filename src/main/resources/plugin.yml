@@ -44,3 +44,10 @@ permissions:
     default: op
   poweressentials.gmsp.others:
     default: op
+  
+  poweressentials.home:
+    default: true
+  poweressentials.sethome:
+    default: true
+  poweressentials.delhome:
+    default: true

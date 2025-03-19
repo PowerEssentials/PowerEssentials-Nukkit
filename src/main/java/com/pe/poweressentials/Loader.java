@@ -16,8 +16,12 @@ import com.pe.poweressentials.commands.gamemode.GMACommand;
 import com.pe.poweressentials.commands.gamemode.GMCCommand;
 import com.pe.poweressentials.commands.gamemode.GMSCommand;
 import com.pe.poweressentials.commands.gamemode.GMSPCommand;
+import com.pe.poweressentials.commands.home.DelHomeCommand;
+import com.pe.poweressentials.commands.home.HomeCommand;
+import com.pe.poweressentials.commands.home.SetHomeCommand;
 import com.pe.poweressentials.config.PEConfig;
 import com.pe.poweressentials.i18n.PELang;
+import com.pe.poweressentials.listener.EventListener;
 import com.pe.poweressentials.utils.Utils;
 
 import cn.nukkit.plugin.PluginBase;
@@ -31,6 +35,8 @@ public class Loader extends PluginBase {
         super.onEnable();
         loadResources();
         loadCommands();
+
+        this.getServer().getPluginManager().registerEvents(new EventListener(this), this);
     }
 
     @Override
@@ -82,7 +88,8 @@ public class Loader extends PluginBase {
                 "fperm", List.of(new FPermCommand()),
                 "heal", List.of(new HealCommand()),
                 "feed", List.of(new FeedCommand()),
-                "gamemode", List.of(new GMCCommand(), new GMSCommand(), new GMSPCommand(), new GMACommand()));
+                "gamemode", List.of(new GMCCommand(), new GMSCommand(), new GMSPCommand(), new GMACommand()),
+                "home", List.of(new HomeCommand(), new SetHomeCommand(), new DelHomeCommand()));
 
         for (Map.Entry<String, List<PECommand>> entry : commands.entrySet()) {
             if (!PEConfig.isCommandDisabled(entry.getKey())) {

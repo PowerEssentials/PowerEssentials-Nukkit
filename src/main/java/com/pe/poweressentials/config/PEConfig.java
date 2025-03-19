@@ -1,8 +1,13 @@
 package com.pe.poweressentials.config;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.pe.poweressentials.Loader;
 
+import cn.nukkit.level.Level;
 import cn.nukkit.utils.Config;
+import cn.nukkit.utils.ConfigSection;
 
 public class PEConfig {
 
@@ -36,5 +41,28 @@ public class PEConfig {
 
   public static long getFeedCooldown() {
     return config.getLong("feed-cooldown", 60000);
+  }
+
+  public static int getHomeDefaultLimit() {
+    return config.getInt("home-default-limit", 5);
+  }
+
+  public static Map<String, Integer> getHomePermissionLimits() {
+    Map<String, Integer> permissions = new HashMap<>();
+    ConfigSection sect = config.getSection("home-permission-limits");
+    if (sect != null && sect.size() > 0) {
+      for (String perm : sect.getKeys(false)) {
+        int limit = sect.getInt(perm);
+        permissions.put(perm, limit);
+      }
+    }
+    return permissions;
+  }
+
+  public static boolean isHomeBlacklistWorld(Level level){
+    if(!config.exists("home-blacklist-worlds")){
+      return false;
+    }
+    return config.getStringList("home-blacklist-worlds").contains(level.getName());
   }
 }
