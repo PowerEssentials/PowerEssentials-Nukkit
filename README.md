@@ -69,15 +69,15 @@
 ---
 
 ## 📂 Installation
-
 1. Download the latest release from the [releases page](https://github.com/PowerEssentials/PowerEssentials-Nukkit/releases).
 2. Place the `PowerEssentials.jar` file into your server's `plugins` folder.
 3. Restart your server. 
 
-<br>
+### Download For PocketMine-MP
+If you use PocketMine-MP, you can download it from the following link: [releases page](https://github.com/PowerEssentials/PowerEssentials/releases).
 
-**For Pocketmine** <br>
-If you use Pocketmine, you can download it from the following link: [releases page](https://github.com/PowerEssentials/PowerEssentials/releases).
+### Download For Bukkit/Spigot/Pape
+If you use PocketMine-MP, you can download it from the following link: [releases page](https://github.com/PowerEssentials/PowerEssentials-Bukkit/releases).
 
 ---
 
