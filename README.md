@@ -77,7 +77,7 @@
 If you use PocketMine-MP, you can download it from the following link: [releases page](https://github.com/PowerEssentials/PowerEssentials/releases).
 
 ### Download For Bukkit/Spigot/Pape
-If you use PocketMine-MP, you can download it from the following link: [releases page](https://github.com/PowerEssentials/PowerEssentials-Bukkit/releases).
+If you use Bukkit/Spigot/Paper, you can download it from the following link: [releases page](https://github.com/PowerEssentials/PowerEssentials-Bukkit/releases).
 
 ---
 
