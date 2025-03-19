@@ -56,6 +56,7 @@ public class UserHomeManager {
     userManager.getData().save();
   }
 
+  @SuppressWarnings("unchecked")
   public HomeData getHome(String name) {
     if (!this.exists(name)) {
       userManager.getLoader().getLogger().error(
@@ -72,6 +73,7 @@ public class UserHomeManager {
     return _HomeData;
   }
 
+  @SuppressWarnings("unchecked")
   public HomeData[] getHomes() {
     if (!userManager.getData().exists("homes")) {
       return new HomeData[0];

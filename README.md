@@ -28,7 +28,7 @@
 
 | Command                                                              | Description                                                                        | Status |
 | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------ |
-| `/hub`, `/lobby`, `/setlobby`                                        | Set and teleport to the lobby.                                                     | ⌛     |
+| `/hub`, `/lobby`, `/setlobby`                                        | Set and teleport to the lobby.                                                     | ✅     |
 | `/gmc [player]`, `/gms [player]`, `/gmspc [player]`, `/gma [player]` | Change gamemode for yourself or others.                                            | ✅     |
 | `/fly [player]`                                                      | Enable or disable flying for yourself or others.                                   | ✅     |
 | `/fperm <plugin name>`                                               | Retrieve plugin permission info.                                                   | ✅     |
@@ -36,7 +36,7 @@
 | `/banitem [world]`, `/unbanitem [world]`, `/banitemlist [world]`     | Ban specific items in a world.                                                     | ⌛     |
 | `/tpa <to,here,accept,deny,cancel> <player>`                         | Request to teleport to another player.                                             | ⌛     |
 | `/rtp`, `/randomteleport`                                            | Randomly teleport to a world (Anti Water Area).                                    | ⌛     |
-| `/home [name]`, `/sethome <name>`, `/delhome <name>`                 | Manage homes for players.                                                          | ⌛     |
+| `/home [name]`, `/sethome <name>`, `/delhome <name>`                 | Manage homes for players.                                                          | ✅     |
 | `/warp [name]`, `/addwarp <name>`, `/delwarp <name>`                 | Create and teleport to warps.                                                      | ⌛     |
 | `/heal [name]`, `/feed [name]`                                       | Heal or feed yourself or another player.                                           | ✅    |
 | `/vanish [player]`, `/vanishlist`                                    | Toggle vanish mode.                                                                | ⌛     |

@@ -47,7 +47,16 @@ permissions:
   
   poweressentials.home:
     default: true
-  poweressentials.sethome:
-    default: true
   poweressentials.delhome:
     default: true
+  poweressentials.sethome:
+    default: true
+  poweressentials.sethome.bypass.limit:
+    default: op
+
+  poweressentials.lobby:
+    default: true
+  poweressentials.setlobby:
+    default: op
+  poweressentials.unsetlobby:
+    default: op

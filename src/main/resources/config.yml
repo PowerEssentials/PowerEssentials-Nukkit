@@ -23,6 +23,9 @@ home-blacklist-worlds:
   - world2 # Name of the blacklisted world.
   - world3 # Another blacklisted world.
 
+# Enable or disable random spawn to home after death.
+random-spawn-to-home-after-death: true 
+
 # Disabled Commands
 # List of commands that should be disabled in the plugin.
 # Leave empty if no commands need to be disabled.

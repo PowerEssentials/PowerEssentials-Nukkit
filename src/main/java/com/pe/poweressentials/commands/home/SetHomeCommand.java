@@ -43,7 +43,7 @@ public class SetHomeCommand extends PECommand {
     }
 
     // cek limit
-    if(userManager.getHomeManager().getHomes().length >= myLimit(player)){
+    if(userManager.getHomeManager().getHomes().length >= myLimit(player) && !player.hasPermission("poweressentials.sethome.bypass.limit")){
       player.sendMessage(prefix + TextFormat.RED + lang.translateString("errorHomeLimit", "sethome", new String[] { String.valueOf(myLimit(player)) }));
       return false;
     }

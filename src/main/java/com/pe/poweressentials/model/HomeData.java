@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class HomeData {
-
   private String name;
   private String world;
   private int x;

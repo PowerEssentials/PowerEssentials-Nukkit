@@ -65,4 +65,8 @@ public class PEConfig {
     }
     return config.getStringList("home-blacklist-worlds").contains(level.getName());
   }
+
+  public static boolean isRandomSpawnToHomeAfterDeath(){
+    return config.getBoolean("random-spawn-to-home-after-death", true);
+  }
 }
